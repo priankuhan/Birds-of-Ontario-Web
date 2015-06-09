@@ -1,0 +1,19 @@
+<% provide(:title, "Game") %>
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Game</h1>
+    <div class="row">
+        <div class="col-lg-6">
+            <%= image_tag "Common Loon.jpg", id: "picture",  value: "Common Loon", class: "img-responsive" %>
+        </div>
+        <div class="col-lg-6">
+            <%= button_tag @options[1], id: "option1", value: @options[1], class: "btn btn-primary btn-block btn-option"  %>
+            <%= button_tag @options[2], id: "option2", value: @options[2], class: "btn btn-primary btn-block btn-option"  %>
+            <%= button_tag @options[3], id: "option3", value: @options[3], class: "btn btn-primary btn-block btn-option"  %>
+            <%= button_tag @options[0], id: "option4", value: @options[0], class: "btn btn-primary btn-block btn-option"  %>
+        </div>
+        <%= hidden_field_tag 'species', @species%>
+    </div>
+  </body>
+</html>

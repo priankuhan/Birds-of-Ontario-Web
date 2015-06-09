@@ -1,0 +1,23 @@
+class StaticPagesController < ApplicationController
+  
+  def home
+    if logged_in?
+      @micropost  = current_user.microposts.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
+  end
+  
+  def about
+  end
+
+  def help
+  end
+  
+  def game
+    @options = ["Northern Flicker", "Common Loon", "Snowy Owl", "Yellowlegs"]
+    @species = "Northern Flicker,Common Loon,Snowy Owl,Yellowlegs"
+  end
+  
+  def contact
+  end
+end
